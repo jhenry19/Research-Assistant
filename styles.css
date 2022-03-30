@@ -1,0 +1,16 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 0 10px;
+  height: 100%;
+  margin: 0;
+}
+
+h1 {
+  color: black;
+  margin-left: 40%;
+  padding: auto;
+}
