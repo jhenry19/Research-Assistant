@@ -1,4 +1,5 @@
 var submit = $("#submit");
+var form_submit = $("#form_submit")
 
 submit.click(function() {
   console.log("submit clicked")
@@ -6,11 +7,20 @@ submit.click(function() {
       url: "/wiki",
       type: "post",
       success: function(response) {
-          console.log(response);
           const info = document.getElementById("info");
-          const makeInfo = document.createElement("span");
-          makeInfo.innerhtml = response;
-          info.innerhtml = response;
+          info.innerHTML = response;
       }
+  });
+});
+
+form_submit.click(function() {
+  $.ajax({
+    url: "/wiki_lookup",
+    type: "post",
+    search_term: $("#search"),
+    success: function(response) {
+        const info = document.getElementById("info");
+        info.innerHTML = response;
+    }
   });
 });
