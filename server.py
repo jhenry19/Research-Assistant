@@ -29,10 +29,18 @@ def wikipedia_search():
     # except:
     #     print("Wikipedia page not found. Try something else.")
 
-    print(page_name)
+    # Hold the page data for the next page
+    global data
     data = {'page_name': page.title, 'summary': wiki.summary(page_name, auto_suggest=False, sentences=3), 'sources': page.references}
-    # for i in range(25):
-    #     to_return += page.references[i] + "\n"
+
+    return render_template('results.html', data=data)
+
+@app.route("/add_bookmark", methods=["POST"])
+def bookmark():
+
+    link = request.args.get("link");
+    print(link)
+    global data
     return render_template('results.html', data=data)
 
 if __name__ == '__main__':
