@@ -8,13 +8,32 @@ def index():
 
 @app.route("/wiki", methods=["POST"])
 def wikipedia_function():
-  return wiki.summary("Wikipedia")
+    earch_term = request.form.get("search")
+    return wiki.summary(wiki.suggest(search_term), 3)
 
 @app.route("/wiki_lookup", methods=["POST"])
 def wikipedia_search():
-    # search_term = request.form.get("search")
-    print(search_term)
-    return wiki.summary(search_term)
+    page_name = request.form.get("search") # what the user entered in the search bar
+
+    try:
+        page = wiki.page(wiki.search(page_name)[0], auto_suggest=False)
+        page_name = wiki.search(page_name)[0]
+    except wiki.DisambiguationError as e:
+        print("DisambiguationError")
+        page = wiki.page(e.options[0])
+        page_name = e.options[0]
+    except:
+        print("PageError. Using wikipedia page")
+        page = wiki.page("wikipedia")
+        page_name = "wikipedia"
+    # except:
+    #     print("Wikipedia page not found. Try something else.")
+
+    print(page_name)
+    data = {'page_name': page.title, 'summary': wiki.summary(page_name, auto_suggest=False, sentences=3), 'sources': page.references}
+    # for i in range(25):
+    #     to_return += page.references[i] + "\n"
+    return render_template('results.html', data=data)
 
 if __name__ == '__main__':
   app.run(debug=True)

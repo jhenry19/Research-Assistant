@@ -8,26 +8,23 @@
     <title>Research Helper</title>
 
     <link rel="stylesheet" href="/static/styles.css" />
+    <script type="text/javascript" {{url_for('static', filename='wiki_results.js')}}></script>
+    <script type="text/javascript">var page_data = {{data|tojson}}</script>
   </head>
 
   <body id="body">
     <div id="header">
       <h1>Research Helper</h1>
     </div>
-    <form action="/wiki_lookup" method = "post">
-      <label for="search">Search term:</label>
-      <input type="text" id="search" name="search" placeholder="type here">
-      <button id="form_submit" type="submit">Search</button>
-    </form>
+    <span id="name"></span>
     <br>
-
-    <button id="submit">Submit</button>
+    <span id="summary"></span>
     <br>
-    
-    <span id="info">info here</span>
+    <div id="references"></div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="/static/form.js"></script>
+
+
+    <script src="/static/wiki_results.js"></script>
 
   </body>
 </html>
