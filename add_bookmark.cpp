@@ -37,7 +37,8 @@ public:
     }
 };
 
-void bubble_sort(vector<Bookmark> vec) {
+vector<Bookmark> bubble_sort(vector<Bookmark> vec) {
+    vector<Bookmark> sortedBookmarks;
     bool haveSwapped = true;
     int maxIndex = vec.size();
     while (haveSwapped) {
@@ -54,6 +55,7 @@ void bubble_sort(vector<Bookmark> vec) {
         }
         --maxIndex; // Update maxIndex
     }
+    return vec;
 }
 
 int main(int argc, char* argv[]) {
@@ -74,7 +76,6 @@ int main(int argc, char* argv[]) {
     while (fIn && fIn.peek() != EOF) {
         getline(fIn, bookmark_topic);
         getline(fIn, bookmark_link);
-
         bookmarks.push_back(Bookmark(bookmark_topic, bookmark_link));
     }
     fIn.close();
@@ -82,15 +83,8 @@ int main(int argc, char* argv[]) {
     //Add the new bookmark to the list
     bookmarks.push_back(Bookmark(topic, link));
 
-    for (int i = 0; i < bookmarks.size(); ++i) {
-        system(("echo " + bookmarks[i].getSubject()).c_str());
-    }
     // Sort alphabetically using bubble sort
-    bubble_sort(bookmarks);
-
-    for (int i = 0; i < bookmarks.size(); ++i) {
-        system(("echo " + bookmarks[i].getSubject()).c_str());
-    }
+    bookmarks = bubble_sort(bookmarks);
 
     // Print output to txt file
     ofstream fOut;

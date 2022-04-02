@@ -1,10 +1,10 @@
 apples
 www.johnySmith.com
+banana
+www.banana.org
 hello
 www.world.com
-burping
-www.burping.com
-zombies
-www.zombies.org
+walrus
+www.walrus.edu
 zombies
 www.zombies.org
