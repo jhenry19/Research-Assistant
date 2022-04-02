@@ -1,10 +1,4 @@
-apples
-www.johnySmith.com
-banana
-www.banana.org
-hello
-www.world.com
-walrus
-www.walrus.edu
-zombies
-www.zombies.org
+Apple
+http://articles.cnn.com/2009-04-08/health/oral.allergy.syndrome_1_allergy-shots-pollen-allergies-oral-allergy-syndrome?_s=PM:HEALTH
+Wombat
+http://www.smh.com.au/articles/2003/07/01/1056825399651.html

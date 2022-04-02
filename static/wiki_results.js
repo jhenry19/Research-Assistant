@@ -1,7 +1,9 @@
 
 
 // Put the wikipedia page title as the page title
-document.getElementById("name").innerHTML = page_data.page_name;
+let subject = page_data.page_name
+document.getElementById("name").innerHTML = subject;
+
 
 // Add wikipedia summary to the page
 document.getElementById("summary").innerHTML = page_data.summary;
@@ -21,7 +23,7 @@ for (ref in page_data.sources) {
 
   // Make form for button to go into
   const bookmark_form = document.createElement("form");
-  bookmark_form.action= "/add_bookmark?link=" + page_data.sources[ref];
+  bookmark_form.action= "/add_bookmark?link=" + page_data.sources[ref] + "&subject=" + subject;
   bookmark_form.method = "post";
 
   // Make button to add to bookmarks

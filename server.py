@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request
 import wikipedia as wiki
+import os
 app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
 def index():
-  return render_template('index.html')
+    os.system("G++ -std=c++1y -o output add_bookmark.cpp")
+    return render_template('index.html')
 
 @app.route("/wiki", methods=["POST"])
 def wikipedia_function():
@@ -37,9 +39,10 @@ def wikipedia_search():
 
 @app.route("/add_bookmark", methods=["POST"])
 def bookmark():
-    link = request.args.get("link");
-    #pass topic and link to C++
-    print(link)
+    subject = request.args.get("subject")
+    link = request.args.get("link")
+    # pass topic and link to C++
+    os.system("./output " + subject + " " + link)
     global data
     return render_template('results.html', data=data)
 
