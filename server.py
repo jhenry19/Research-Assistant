@@ -37,8 +37,8 @@ def wikipedia_search():
 
 @app.route("/add_bookmark", methods=["POST"])
 def bookmark():
-
     link = request.args.get("link");
+    #pass topic and link to C++
     print(link)
     global data
     return render_template('results.html', data=data)
