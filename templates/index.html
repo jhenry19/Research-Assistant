@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/> -->
     <meta name="description" content="Helps with Research!">
     <meta name="author" content="Julian Henry">
-    <title>Research Helper</title>
 
+    <title>Research Helper</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
     <link rel="stylesheet" href="/static/styles.css" />
   </head>
 
@@ -14,20 +14,26 @@
     <div id="header">
       <h1>Research Helper</h1>
     </div>
+    <br>
+    <!-- description -->
+    <div id="description">
+      Research solved! Type in a research topic and instantly be connected with a rich bibilography
+      of resources that can hel you with your research project. This site provides you with links on the research
+      topic's wikipedia page so that researching is easier than ever!
+    </div>
+    <br>
+    <br>
+
+    <!-- Seach bar -->
     <form action="/wiki_lookup" method = "post">
-      <label for="search">Search term:</label>
-      <input type="text" id="search" name="search" placeholder="type here">
+      <input type="text" id="search" name="search" placeholder="Type research topic here">
       <button id="form_submit" type="submit">Search</button>
     </form>
     <br>
-
-    <button id="submit">Submit</button>
     <br>
-    
-    <span id="info">info here</span>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="/static/form.js"></script>
-
+    <!-- bookmark button -->
+    <form action="/bookmarks" method = "post">
+      <button id="form_submit" type="submit">View Bookmarks</button>
+    </form>
   </body>
 </html>

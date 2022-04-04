@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Helps with Research!">
+    <meta name="author" content="Julian Henry">
+
+    <title>Research Helper</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+    <link rel="stylesheet" href="/static/styles.css" />
+
+    <script type="text/javascript" {{url_for('static', filename='load_bookmarks.js')}}></script>
+    <script type="text/javascript">var data = {{data|tojson}}</script>
+</head>
+
+<body>
+    <div id="header">
+      <h1>Research Helper</h1>
+    </div>
+    <!-- Return to search button -->
+    <form action="/index" method = "post">
+      <button id="form_submit" type="submit">Back to Search</button>
+    </form>
+    <br>
+    <br>
+
+    <!-- div is filled with bookmarks in javascript -->
+    <div id="bookmarks"></div>
+
+    <!-- javascript code -->
+    <script src="/static/load_bookmarks.js"></script>
+  </body>
+  </html>

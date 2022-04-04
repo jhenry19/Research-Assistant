@@ -1,30 +1,55 @@
 html {
   height: 100%;
   padding: 10%;
-
+  padding-top: 3%;
+  background-color: #8BBEB2;
+  color: #010914;
 }
 
 body {
   font-family: sans-serif;
-  padding: 0 10px;
   height: 100%;
   margin: 0;
-}
-
-h1 {
-  color: black;
-  margin: auto;
-  width: 100%;
-  padding: 3%;
   text-align: center;
 }
 
-#name {
+h1 {
   margin: auto;
   width: 100%;
   padding: 3%;
-  font-size: 24px;
+  font-size: 52px;
+}
 
+#description {
+  width: 60%;
+  margin: auto;
+}
+
+a {
+color: #03183A;
+font-weight: normal;
+text-decoration: none;
+padding: 0px;
+margin: 0px;
+font-size: 18px
+}
+
+a: hover {
+color: #403F4C;
+font-weight: normal;
+text-decoration: underline;
+cursor: auto;
+padding: 0px;
+margin: 0px;
+font-size: 21px;
+}
+
+a:clicked {
+  color: white;
+}
+
+#name {
+  font-size: 24px;
 }
 
 #summary {
@@ -35,6 +60,52 @@ h1 {
   font-size: 14px;
 }
 
+#search {
+  border-radius: 28px;
+  border-width: thin;
+  height: 40px;
+  width: 30%;
+  text-align: center;
+  margin-right: 20px;
+}
+
 .wiki_reference {
-  padding: 1%;
+  padding: 2%;
+  margin: auto;
+  display: inline;
+}
+
+.reference_link {
+  width: 40%;
+  margin-right: 15%;
+}
+
+.bookmark_form {
+  width: 40%;
+  margin-right: 10px;
+  display: inline;
+}
+
+button {
+	background: #FFBE85;
+	background-color:#FFBE85;
+	border-radius:28px;
+	border:1px solid #FF9B42;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+  height: 40px;
+	font-family:Arial;
+	font-size:14px;
+	padding:9px 30px;
+	text-decoration:none;
+	text-shadow:2px 2px 2px #2f6627;
+}
+button:hover {
+	background: #F7A072;
+	background-color: #F7A072;
+}
+button:active {
+	position:relative;
+	top:1px;
 }

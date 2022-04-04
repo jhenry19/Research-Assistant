@@ -7,6 +7,7 @@
     <meta name="author" content="Julian Henry">
     <title>Research Helper</title>
 
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
     <link rel="stylesheet" href="/static/styles.css" />
     <script type="text/javascript" {{url_for('static', filename='wiki_results.js')}}></script>
     <script type="text/javascript">var page_data = {{data|tojson}}</script>
@@ -16,14 +17,34 @@
     <div id="header">
       <h1>Research Helper</h1>
     </div>
+    <br>
+
+    <!-- title of reseach topic -->
     <span id="name"></span>
     <br>
+    <br>
+
+    <!-- summary of research topic -->
     <span id="summary"></span>
     <br>
+    <br>
+
+    <!-- navagation buttons -->
+    <form action="/bookmarks" method = "post">
+      <button id="form_submit" type="submit">View All Bookmarks</button>
+    </form>
+    <br>
+    <form action="/index" method = "post">
+      <button id="form_submit" type="submit">Back to Search</button>
+    </form>
+
+    <br>
+    <br>
+    <!-- div is filled with references in javascript -->
     <div id="references"></div>
+    <br>
 
-
-
+    <!-- javascript -->
     <script src="/static/wiki_results.js"></script>
 
   </body>
