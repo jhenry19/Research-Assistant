@@ -4,6 +4,8 @@ Banana
 http://www.adelaidenow.com.au/news/opinion/richard-evans-throwing-bananas-at-black-sportsmen-has-been-recognised-as-racism-across-europe-for-decades/news-story/afcb5d4a634119b327507e7616755e0b
 Banana
 http://www.dudaonline.com/southeast-asia/thailand/fried-banana-flowers/
+Elizabeth-I
+http://www.oxforddnb.com/view/article/8636
 Guava
 http://pubmed.ncbi.nlm.nih.gov/24269772
 Guava
@@ -16,3 +18,5 @@ Queen-Elizabeth-The-Queen-Mother
 http://nla.gov.au/nla.news-article54884539
 Wikimedia
 http://www.adelaidenow.com.au/news/opinion/richard-evans-throwing-bananas-at-black-sportsmen-has-been-recognised-as-racism-across-europe-for-decades/news-story/afcb5d4a634119b327507e7616755e0b
+Wombat
+http://wildlifepark.com.au/wildlife_animals/common-wombat/

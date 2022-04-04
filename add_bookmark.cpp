@@ -5,6 +5,9 @@
 using namespace std;
 using std::endl;
 
+/**
+ * A Bookmark has a subject and a link and allows for bubble sorting through overloaded operators
+ */
 class Bookmark {
 private:
     string subject;
@@ -37,6 +40,9 @@ public:
     }
 };
 
+/**
+ * Bubble sorts a vector of Bookmark objects. From CS121
+ */
 vector<Bookmark> bubble_sort(vector<Bookmark> vec) {
     vector<Bookmark> sortedBookmarks;
     bool haveSwapped = true;
@@ -58,6 +64,9 @@ vector<Bookmark> bubble_sort(vector<Bookmark> vec) {
     return vec;
 }
 
+/**
+ * Called from CLI with the first argument being the topic and the second being the link
+ */
 int main(int argc, char* argv[]) {
     string topic = argv[1];
     string link = argv[2];
