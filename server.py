@@ -45,8 +45,8 @@ def bookmark():
     subject = request.args.get("subject")
     link = request.args.get("link")
 
-    # Shortens subject to one word so that the format is the statement
-    subject.replace(' ', '')
+    # Removes spaces so that the subject is on one line
+    subject = subject.replace(" ", "-")
 
     # Pass topic and link to C++ to be saved to the bookmark file
     os.system("./output " + subject + " " + link)
