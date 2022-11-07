@@ -26,6 +26,3 @@ https://wikipedia.readthedocs.io/en/latest/code.html#indices-and-tables
 
 Using flask to get parameters from a sites URL:
 https://stackoverflow.com/questions/24892035/how-can-i-get-the-named-parameters-from-a-url-using-flask
-
-## Grading
-I think this project deserves 75 points. I think for design, execution, and usability this project gets a great. All requirements are satisfied, the program is consistent in style but has a bug or two, and it is clear and useful.
