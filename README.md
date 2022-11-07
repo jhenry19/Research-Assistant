@@ -1,5 +1,5 @@
-# M3OEP-Large-jhenry3
-Julian Henry
+# Research Helper
+This program was created for a project in CS 120 - Advanced Programming during my sophomore year at UVM.
 
 
 ## Installations
